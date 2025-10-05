@@ -21,8 +21,7 @@ void rr_scheduler(uint32_t current_time_ms, queue_t *rq, pcb_t **cpu_task) {
                 .time_ms = current_time_ms
             };
             write((*cpu_task)->sockfd, &msg, sizeof(msg_t));
-            printf("[RR] Processo PID=%d terminou (%d ms)\n",
-                   (*cpu_task)->pid, (*cpu_task)->time_ms);
+
             free(*cpu_task);
             *cpu_task = NULL;
             slice_elapsed = 0;
@@ -46,10 +45,11 @@ void rr_scheduler(uint32_t current_time_ms, queue_t *rq, pcb_t **cpu_task) {
     if (*cpu_task == NULL && rq->head != NULL) {
         queue_elem_t *elem = rq->head;
         rq->head = elem->next;
-        if (rq->head == NULL)
-            rq->tail = NULL;
 
-        elem->next = NULL;
+        if (rq->head == NULL) {
+            rq->tail = NULL;
+            elem->next = NULL;
+        }
         *cpu_task = elem->pcb;
         free(elem);
     }
