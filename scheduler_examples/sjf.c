@@ -26,7 +26,6 @@ void sjf_scheduler(uint32_t current_time_ms, queue_t *rq, pcb_t **cpu_task) {
     if (*cpu_task == NULL && rq->head != NULL) {
         queue_elem_t *min_elem = rq->head;
         queue_elem_t *min_prev = NULL;
-
         queue_elem_t *prev = NULL;
         queue_elem_t *curr = rq->head;
 
