@@ -1,0 +1,5 @@
+/home/aluno/Aula3/scheduler_examples/cmake-build-debug-remote-host/CMakeFiles/scheduler.dir
+/home/aluno/Aula3/scheduler_examples/cmake-build-debug-remote-host/CMakeFiles/app.dir
+/home/aluno/Aula3/scheduler_examples/cmake-build-debug-remote-host/CMakeFiles/app-io.dir
+/home/aluno/Aula3/scheduler_examples/cmake-build-debug-remote-host/CMakeFiles/edit_cache.dir
+/home/aluno/Aula3/scheduler_examples/cmake-build-debug-remote-host/CMakeFiles/rebuild_cache.dir
