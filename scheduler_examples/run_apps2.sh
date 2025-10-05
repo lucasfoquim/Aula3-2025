@@ -4,4 +4,3 @@
 ./app D 2 &
 ./app E 3 &
 ./app F 15 &
-
